@@ -5,7 +5,7 @@ public class MyClient {
     public static void main(String[] args) {
         try {
             // Replace "serverIpAddress" with the IP address of the server
-            Registry registry = LocateRegistry.getRegistry("serverIpAddress", 5000);
+            Registry registry = LocateRegistry.getRegistry("192.168.8.100", 5000);
 
             MyRemoteInterface stub = (MyRemoteInterface) registry.lookup("RemoteObject");
 

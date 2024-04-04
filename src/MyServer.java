@@ -11,6 +11,7 @@ public class MyServer implements MyRemoteInterface {
 
     public static void main(String args[]) {
         try {
+            System.setProperty("java.rmi.server.hostname","192.168.8.100");
             MyServer obj = new MyServer();
             MyRemoteInterface stub = (MyRemoteInterface) UnicastRemoteObject.exportObject(obj, 0);
 
